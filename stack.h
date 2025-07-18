@@ -4,16 +4,14 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-struct node
-{
+struct node {
     int data;
     node * next;
 };
 
 node * top = nullptr;
 
-void push(int value)
-{
+void push(int value) {
     node * newnode = (node*)malloc(sizeof(node));
     if (newnode == NULL)
         return;
@@ -24,17 +22,14 @@ void push(int value)
 
 
 
-void display()
-{
+void display() {
     node * temp;
     if (top==NULL)
     	return;
-    else 
-    {
+    else {
         temp = top;
         cout << "Stack elements : " ;
-        while(temp != NULL) 
-        {
+        while(temp != NULL) {
             cout << temp -> data << " ";
             temp = temp -> next;
         }
@@ -43,13 +38,11 @@ void display()
 }
 
 
-void pop() 
-{
+void pop() {
     node * temp;
     if (top==NULL)
-		return;
-    else
-    {
+	return;
+    else {
         temp = top;
         cout << "Popped out element is : " << temp->data << endl;
         top = top -> next;
