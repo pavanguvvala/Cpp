@@ -2,9 +2,10 @@
 
 int main()
 {
-    push(10);
-    push(20);
-    push(30);
+    push(100);
+    push(200);
+    push(300);
+    push(400);
     display(); 
     pop();     
     display(); 
